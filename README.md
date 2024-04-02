@@ -1,5 +1,5 @@
 # Godot 4.2 Beehave Tutorial
-This repository is related to the Medium article [Easily creating Behaviour Trees in Godot 4.2 (Beehave Tutorial)] (https://medium.com/@liam.flannery56/easily-creating-behaviour-trees-in-godot-4-2-beehave-tutorial-ff8a911d43a0)
+This repository is related to the Medium article [Easily creating Behaviour Trees in Godot 4.2 (Beehave Tutorial)](https://medium.com/@liam.flannery56/easily-creating-behaviour-trees-in-godot-4-2-beehave-tutorial-ff8a911d43a0)
 ## 📦 Installation
 1. Download the [template](https://github.com/liamflannery/Godot-4.2-Beehave-Tutorial/releases/tag/template) project (click on the source_code.zip)
 2. Unzip the downloaded file
