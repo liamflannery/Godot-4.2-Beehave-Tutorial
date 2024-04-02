@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://4eftqrut0b88"]
+
+[ext_resource type="Script" path="res://scenes/time_control/time_interface.gd" id="1_05eq3"]
+[ext_resource type="Texture2D" uid="uid://cetcn1jfnah1w" path="res://assets/sun_icon.png" id="2_b3l1f"]
+[ext_resource type="Texture2D" uid="uid://bf5n4uphsw62x" path="res://assets/moon_icon.png" id="3_0dpxg"]
+
+[node name="time_interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05eq3")
+day_colour = Color(0.509804, 0.752941, 0.866667, 1)
+night_colour = Color(0.188235, 0.227451, 0.317647, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="sky" type="ColorRect" parent="CanvasLayer"]
+show_behind_parent = true
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 18.0
+offset_right = 20.0
+offset_bottom = 58.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="set_day" type="Button" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "Day"
+
+[node name="set_night" type="Button" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "Night"
+
+[node name="sun_icon" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_top = 10.0
+offset_right = -19.0
+offset_bottom = 110.0
+grow_horizontal = 0
+texture = ExtResource("2_b3l1f")
+
+[node name="moon_icon" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_top = 10.0
+offset_right = -19.0
+offset_bottom = 110.0
+grow_horizontal = 0
+texture = ExtResource("3_0dpxg")

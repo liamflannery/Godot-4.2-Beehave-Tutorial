@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfehdwxpp1dw2"]
+
+[ext_resource type="PackedScene" uid="uid://bnnjfubh58bha" path="res://scenes/buildings/yellow_building.tscn" id="1_l1h2r"]
+[ext_resource type="PackedScene" uid="uid://bvhe1jmbuvmhq" path="res://scenes/buildings/blue_building.tscn" id="2_2yw8j"]
+[ext_resource type="PackedScene" uid="uid://kokp1kx1xegb" path="res://scenes/character/character.tscn" id="3_dxoc0"]
+[ext_resource type="Texture2D" uid="uid://bxio77i51tuw0" path="res://assets/sleep_icon.png" id="4_ypfup"]
+[ext_resource type="PackedScene" uid="uid://4eftqrut0b88" path="res://scenes/time_control/time_interface.tscn" id="5_oaqv3"]
+[ext_resource type="Texture2D" uid="uid://6rwnyawb0idn" path="res://assets/working_icon.png" id="6_7uita"]
+
+[node name="main" type="Node2D"]
+
+[node name="time_interface" parent="." instance=ExtResource("5_oaqv3")]
+
+[node name="yellow_building" parent="." instance=ExtResource("1_l1h2r")]
+position = Vector2(421, 0)
+
+[node name="blue_building" parent="." instance=ExtResource("2_2yw8j")]
+position = Vector2(-385, 0)
+
+[node name="Character" parent="." node_paths=PackedStringArray("current_building", "home", "work_location", "sleep_icon", "work_icon") instance=ExtResource("3_dxoc0")]
+current_building = NodePath("../yellow_building")
+home = NodePath("../blue_building")
+work_location = NodePath("../yellow_building")
+sleep_icon = NodePath("../sleep_icon")
+work_icon = NodePath("../work_icon")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="sleep_icon" type="Sprite2D" parent="."]
+texture = ExtResource("4_ypfup")
+
+[node name="work_icon" type="Sprite2D" parent="."]
+texture = ExtResource("6_7uita")
